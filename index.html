@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b4f71">
+  <title>VBIT Campus Guide</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div class="logo-mark">
+        <img class="logo-image" src="images/logo.png"
+          alt="Vignana Bharathi Institute of Technology logo">
+        <span class="logo-fallback" aria-hidden="true">V</span>
+      </div>
+      <div>
+        <p class="college-name">Vignana Bharathi Institute of Technology</p>
+        <h1>Campus Guide</h1>
+      </div>
+    </header>
+
+    <section id="language-screen" class="screen" aria-labelledby="language-title">
+      <h2 id="language-title">Choose your language</h2>
+      <p class="support-text">మీ భాషను ఎంచుకోండి · भाषा चुनें</p>
+      <div class="language-options">
+        <button class="language-button" data-language="te" type="button">
+          <span class="language-script">తెలుగు</span>
+          <span class="language-english">Telugu</span>
+        </button>
+        <button class="language-button" data-language="hi" type="button">
+          <span class="language-script">हिन्दी</span>
+          <span class="language-english">Hindi</span>
+        </button>
+        <button class="language-button" data-language="en" type="button">
+          <span class="language-script">English</span>
+          <span class="language-english">English</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="login-screen" class="screen hidden" aria-labelledby="login-title">
+      <button id="back-to-language" class="text-button" type="button">← Back</button>
+      <h2 id="login-title">Welcome</h2>
+      <p id="login-subtitle" class="support-text">Tell us your name and phone number</p>
+
+      <form id="login-form" novalidate>
+        <label for="visitor-name" id="name-label">Name</label>
+        <input id="visitor-name" name="name" type="text" autocomplete="name" required>
+
+        <label for="visitor-phone" id="phone-label">Phone number</label>
+        <input id="visitor-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+
+        <p id="login-error" class="error-message" role="alert" aria-live="polite"></p>
+        <button class="primary-button" type="submit" id="continue-button">Continue</button>
+      </form>
+
+      <button id="guest-button" class="guest-button" type="button">Continue as Guest</button>
+    </section>
+
+    <section id="ready-screen" class="screen hidden" aria-labelledby="ready-title">
+      <div class="welcome-icon" aria-hidden="true">✅</div>
+      <h2 id="ready-title">You are ready!</h2>
+      <p id="ready-message" class="support-text">Campus directions will appear here next.</p>
+      <button id="open-home-button" class="primary-button" type="button">Open campus guide</button>
+      <button id="reset-button" class="secondary-button" type="button">Start again</button>
+    </section>
+
+    <section id="home-screen" class="screen hidden" aria-labelledby="home-title">
+      <div class="screen-navigation">
+        <button id="home-back-button" class="nav-button" type="button">← Back</button>
+        <button id="home-home-button" class="nav-button active-nav-button" type="button">⌂ Home</button>
+      </div>
+      <div class="home-heading">
+        <div class="welcome-icon" aria-hidden="true">📍</div>
+        <h2 id="home-title">Where do you want to go?</h2>
+        <p id="home-subtitle" class="support-text">Tap a place</p>
+      </div>
+      <div id="home-tiles" class="home-tiles"></div>
+      <button id="help-button" class="help-button" type="button">
+        <span aria-hidden="true">🆘</span>
+        <span id="help-label">Help</span>
+      </button>
+    </section>
+
+    <section id="blocks-screen" class="screen hidden" aria-labelledby="blocks-title">
+      <div class="screen-navigation">
+        <button id="blocks-back-button" class="nav-button" type="button">← Back</button>
+        <button id="blocks-home-button" class="nav-button active-nav-button" type="button">⌂ Home</button>
+      </div>
+      <div class="home-heading">
+        <div class="welcome-icon" aria-hidden="true">🏢</div>
+        <h2 id="blocks-title">Campus Blocks</h2>
+        <p id="blocks-subtitle" class="support-text">Choose a block</p>
+      </div>
+      <label class="blocks-search-label" for="blocks-search">Search department</label>
+      <input id="blocks-search" class="blocks-search" type="search"
+        placeholder="Example: ECE or Library" autocomplete="off">
+      <div id="blocks-list" class="blocks-list"></div>
+    </section>
+
+    <section id="block-detail-screen" class="screen hidden" aria-labelledby="block-detail-title">
+      <button id="block-detail-back-button" class="primary-button" type="button">← Back</button>
+      <h2 id="block-detail-title">Block</h2>
+      <div id="block-detail-list" class="detail-list"></div>
+      <button id="block-detail-route-button" class="primary-button hidden" type="button">Show route</button>
+      <button id="block-detail-voice-button" class="voice-guidance-button" type="button">
+        <span aria-hidden="true">🔊</span>
+        <span>Hear details</span>
+      </button>
+    </section>
+
+    <section id="restrooms-screen" class="screen hidden" aria-labelledby="restrooms-title">
+      <button id="restrooms-back-button" class="primary-button" type="button">← Back</button>
+      <h2 id="restrooms-title">Restrooms</h2>
+      <div id="restrooms-list" class="detail-list"></div>
+      <button id="restrooms-voice-button" class="voice-guidance-button" type="button">
+        <span aria-hidden="true">🔊</span>
+        <span>Hear restroom locations</span>
+      </button>
+    </section>
+
+    <section id="map-screen" class="screen hidden" aria-labelledby="map-title">
+      <div class="screen-navigation">
+        <button id="map-back-button" class="nav-button" type="button">← Go Back</button>
+        <button id="map-home-button" class="nav-button active-nav-button" type="button">⌂ Home</button>
+      </div>
+      <h2 id="map-title">Campus map</h2>
+      <div class="map-layer-switch" role="group" aria-label="Map layer">
+        <button id="map-layer-button" class="map-layer-button active-layer" type="button">Satellite</button>
+      </div>
+      <div id="map" class="map-container" role="application" aria-label="VBIT campus map"></div>
+      <div class="map-actions">
+        <button id="follow-me-button" class="map-action-button active-map-action" type="button">Follow me: On</button>
+        <button id="recenter-button" class="map-action-button" type="button">Re-center</button>
+      </div>
+      <div id="destination-card" class="destination-card hidden">
+        <img id="destination-photo" class="destination-photo" src="" alt="">
+        <div>
+          <h3 id="destination-name">Destination</h3>
+          <p id="destination-description" class="support-text"></p>
+          <p id="walking-time" class="walking-time"></p>
+        </div>
+      </div>
+      <button id="start-gate-button" class="primary-button hidden" type="button">Start from Main Gate</button>
+      <button id="voice-guidance-button" class="voice-guidance-button" type="button">
+        <span aria-hidden="true">🔊</span>
+        <span id="voice-guidance-label">Hear directions</span>
+      </button>
+      <p id="location-status" class="location-status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

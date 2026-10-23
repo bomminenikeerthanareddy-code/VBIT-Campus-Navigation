@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#dceff5"/>
+  <rect x="110" y="125" width="420" height="150" rx="8" fill="#0b4f71"/>
+  <path d="M80 125h480L320 55z" fill="#1769aa"/>
+  <rect x="155" y="175" width="62" height="100" fill="#fff"/>
+  <rect x="289" y="175" width="62" height="100" fill="#fff"/>
+  <rect x="423" y="175" width="62" height="100" fill="#fff"/>
+  <text x="320" y="325" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#153d50">VBIT</text>
+</svg>

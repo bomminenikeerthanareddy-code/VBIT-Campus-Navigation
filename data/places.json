@@ -1,0 +1,311 @@
+[
+  {
+    "id": "main-gate",
+    "name_en": "Main Gate",
+    "name_te": "ప్రధాన గేట్",
+    "name_hi": "मुख्य गेट",
+    "category": "gate",
+    "lat": 17.47214,
+    "lng": 78.72382,
+    "photo": "images/main-gate.jpg",
+    "description": "Campus entrance"
+  },
+  {
+    "id": "parking",
+    "name_en": "Parking",
+    "name_te": "పార్కింగ్",
+    "name_hi": "पार्किंग",
+    "category": "parking",
+    "lat": 17.4721,
+    "lng": 78.7241,
+    "photo": "images/parking.jpg",
+    "description": "Visitor parking area"
+  },
+  {
+    "id": "admin-office",
+    "name_en": "Main Office",
+    "name_te": "ప్రధాన కార్యాలయం",
+    "name_hi": "मुख्य कार्यालय",
+    "category": "office",
+    "lat": 17.4712,
+    "lng": 78.7231,
+    "photo": "images/admin-office.jpg",
+    "description": "Administration office"
+  },
+  {
+    "id": "admissions",
+    "name_en": "Admissions",
+    "name_te": "అడ్మిషన్లు",
+    "name_hi": "प्रवेश",
+    "category": "office",
+    "lat": 17.47122,
+    "lng": 78.72322,
+    "photo": "images/admin-office.jpg",
+    "description": "Admissions office"
+  },
+  {
+    "id": "fee-counter",
+    "name_en": "Fee Counter",
+    "name_te": "ఫీజు కౌంటర్",
+    "name_hi": "फीस काउंटर",
+    "category": "office",
+    "lat": 17.47125,
+    "lng": 78.72315,
+    "photo": "images/admin-office.jpg",
+    "description": "Fee payment counter"
+  },
+  {
+    "id": "principal-office",
+    "name_en": "Principal Office",
+    "name_te": "ప్రిన్సిపాల్ కార్యాలయం",
+    "name_hi": "प्रिंसिपल कार्यालय",
+    "category": "office",
+    "lat": 17.47118,
+    "lng": 78.72305,
+    "photo": "images/principal-office.jpg",
+    "description": "Principal's office"
+  },
+  {
+    "id": "canteen",
+    "name_en": "Canteen",
+    "name_te": "క్యాంటీన్",
+    "name_hi": "कैंटीन",
+    "category": "food",
+    "lat": 17.4699,
+    "lng": 78.7232,
+    "photo": "images/canteen.jpg",
+    "description": "Food and refreshments"
+  },
+  {
+    "id": "library",
+    "name_en": "Library",
+    "name_te": "లైబ్రరీ",
+    "name_hi": "पुस्तकालय",
+    "category": "study",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/library.jpg",
+    "description": "College library"
+  },
+  {
+    "id": "restrooms",
+    "name_en": "Restrooms",
+    "name_te": "మరుగుదొడ్లు",
+    "name_hi": "शौचालय",
+    "category": "facility",
+    "lat": 17.47045,
+    "lng": 78.7225,
+    "photo": "images/restrooms.jpg",
+    "description": "Public restrooms"
+  },
+  {
+    "id": "hostel",
+    "name_en": "Hostel",
+    "name_te": "హాస్టల్",
+    "name_hi": "छात्रावास",
+    "category": "stay",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/hostel.jpg",
+    "description": "Student hostel",
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "srujan",
+    "name_en": "Srujan Block",
+    "name_te": "సృజన్ బ్లాక్",
+    "name_hi": "सृजन ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/srujan.jpg",
+    "description": "Classrooms and laboratories",
+    "departments": [
+      "CSE",
+      "IT",
+      "EEE",
+      "MBA"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "avishkar",
+    "name_en": "Avishkar Block",
+    "name_te": "ఆవిష్కార్ బ్లాక్",
+    "name_hi": "आविष्कार ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/avishkar.jpg",
+    "description": "Classrooms and laboratories",
+    "departments": [
+      "CSE (AI & ML)",
+      "CSE (Data Science)"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "nirmithi",
+    "name_en": "Nirmithi Block",
+    "name_te": "నిర్మితి బ్లాక్",
+    "name_hi": "निर्मिति ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/nirmithi.jpg",
+    "description": "Classrooms and laboratories",
+    "departments": [
+      "Mechanical Engineering",
+      "CSBS"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "prashasan",
+    "name_en": "Prashasan Block",
+    "name_te": "ప్రశాసన్ బ్లాక్",
+    "name_hi": "प्रशासन ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/prashasan.jpg",
+    "description": "Administration and library",
+    "departments": [
+      "College Offices",
+      "Computer Centre",
+      "Central Library"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "aakash",
+    "name_en": "Aakash Block",
+    "name_te": "ఆకాశ్ బ్లాక్",
+    "name_hi": "आकाश ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/aakash.jpg",
+    "description": "Classrooms and laboratories",
+    "departments": [
+      "ECE",
+      "Civil Engineering",
+      "CSE (Cyber Security)"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "pratham",
+    "name_en": "Pratham Block",
+    "name_te": "ప్రథమ్ బ్లాక్",
+    "name_hi": "प्रथम ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/pratham.jpg",
+    "description": "First-year teaching and workshops",
+    "departments": [
+      "Freshman Engineering (First Year B.Tech)",
+      "Science Labs",
+      "Workshops"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "prathibha",
+    "name_en": "Prathibha Block",
+    "name_te": "ప్రతిభ బ్లాక్",
+    "name_hi": "प्रतिभा ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/prathibha.jpg",
+    "description": "First-year teaching and library",
+    "departments": [
+      "Freshman Engineering (First Year B.Tech)",
+      "Science Labs",
+      "Department Library"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "pragnya",
+    "name_en": "Pragnya Block",
+    "name_te": "ప్రజ్ఞ బ్లాక్",
+    "name_hi": "प्रज्ञा ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/pragnya.jpg",
+    "description": "Examination services",
+    "departments": [
+      "Examination Branch"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "vishwakarma",
+    "name_en": "Vishwakarma Block",
+    "name_te": "విశ్వకర్మ బ్లాక్",
+    "name_hi": "विश्वकर्मा ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/vishwakarma.jpg",
+    "description": "Engineering workshop and IT",
+    "departments": [
+      "Central Engineering Workshop",
+      "IT"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "nalanda",
+    "name_en": "Nalanda Block",
+    "name_te": "నాలంద బ్లాక్",
+    "name_hi": "नालंदा ब्लॉक",
+    "category": "block",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/nalanda.jpg",
+    "description": "Student services and auditorium",
+    "departments": [
+      "Training & Placement Cell",
+      "IIIC",
+      "EDC",
+      "Health Center",
+      "Main Auditorium"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "nachiketha-hostel",
+    "name_en": "Nachiketha Block",
+    "name_te": "నచికేత బ్లాక్",
+    "name_hi": "नचिकेता ब्लॉक",
+    "category": "hostel",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/nachiketha-hostel.jpg",
+    "description": "Boys hostel",
+    "departments": [
+      "Boys Hostel"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  },
+  {
+    "id": "niveditha-hostel",
+    "name_en": "Niveditha Block",
+    "name_te": "నివేదిత బ్లాక్",
+    "name_hi": "निवेदिता ब्लॉक",
+    "category": "hostel",
+    "lat": 17.47058,
+    "lng": 78.72265,
+    "photo": "images/niveditha-hostel.jpg",
+    "description": "Girls hostel",
+    "departments": [
+      "Girls Hostel"
+    ],
+    "coordinates_note": "TODO: replace with real coordinates"
+  }
+]
